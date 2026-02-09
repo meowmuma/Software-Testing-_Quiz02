@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-09T15:23:21.513317" rpa="false" schemaversion="5">
+<suite id="s1" name="testRF02" source="C:\Software-Testing-_Quiz02-main\testRF02.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-09T15:23:21.723234" level="INFO">Opening browser 'Chrome' to base url 'https://chiangmuan.igovapp.com/'.</msg>
+<arg>https://chiangmuan.igovapp.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-09T15:23:21.723011" elapsed="2.781179"/>
+</kw>
+<test id="s1-t1" name="F01_Login" line="46">
+<kw name="Login With LINE (QR Code)">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_BTN}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T15:23:24.505805" elapsed="0.019504"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-09T15:23:24.525782" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/nav/header/div/a[1]'.</msg>
+<arg>${LOGIN_PAGE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T15:23:24.525508" elapsed="1.310716"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${QR_MODE_BTN}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T15:23:25.836391" elapsed="0.432774"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-09T15:23:26.269599" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div/div[2]/div/div[2]/a'.</msg>
+<arg>${QR_MODE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T15:23:26.269362" elapsed="0.044408"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<arg>กรุณาสแกน QR Code ด้วย LINE แล้วกด OK เพื่อดำเนินการต่อ</arg>
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2026-02-09T15:23:26.313950" elapsed="4.768634"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-09T15:23:41.335247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T15:23:41.335461" level="FAIL">Element 'xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div[3]/button' not visible after 10 seconds.</msg>
+<arg>${LINE_CONFIRM_BTN}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-09T15:23:31.083405" elapsed="10.253559">Element 'xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div[3]/button' not visible after 10 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${LINE_CONFIRM_BTN}</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T15:23:31.082822" elapsed="10.254253"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-09T15:23:41.337694" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div[3]/button'.</msg>
+<msg time="2026-02-09T15:23:41.410730" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T15:23:41.410881" level="FAIL">Element with locator 'xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div[3]/button' not found.</msg>
+<arg>${LINE_CONFIRM_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-09T15:23:41.337523" elapsed="0.074746">Element with locator 'xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div[3]/button' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${LINE_CONFIRM_BTN}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T15:23:41.337214" elapsed="0.075147"/>
+</kw>
+<status status="PASS" start="2026-02-09T15:23:24.505501" elapsed="16.906938"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-09T15:23:41.412978" level="INFO">Login success</msg>
+<arg>Login success</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-09T15:23:41.412720" elapsed="0.000299"/>
+</kw>
+<doc>ทดสอบการเข้าสู่ระบบด้วย LINE QR Code (Manual Scan)</doc>
+<status status="PASS" start="2026-02-09T15:23:24.504498" elapsed="16.908698"/>
+</test>
+<test id="s1-t2" name="F02_View_Health_Checkup_History" line="51">
+<kw name="Open Health Check-up History Page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-09T15:24:01.633883" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T15:24:01.634023" level="FAIL">Element 'xpath=//*[@id="root"]/div/main/section/div[3]/div[2]/div/div/a[1]/div' not visible after 20 seconds.</msg>
+<arg>${SERVICE_CARD}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-09T15:23:41.414474" elapsed="20.220338">Element 'xpath=//*[@id="root"]/div/main/section/div[3]/div[2]/div/div/a[1]/div' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SERVICE_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.634976" elapsed="0.000029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HISTORY_ICON}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635075" elapsed="0.000020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HISTORY_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635159" elapsed="0.000019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHECK_HISTORY_BTN}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635237" elapsed="0.000018"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CHECK_HISTORY_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635314" elapsed="0.000017"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>ประวัติ</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635393" elapsed="0.000018"/>
+</kw>
+<status status="FAIL" start="2026-02-09T15:23:41.414283" elapsed="20.221228">Element 'xpath=//*[@id="root"]/div/main/section/div[3]/div[2]/div/div/a[1]/div' not visible after 20 seconds.</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>View Health Check-up History success</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-09T15:24:01.635711" elapsed="0.000023"/>
+</kw>
+<doc>ทดสอบการดูประวัติการตรวจสุขภาพ</doc>
+<status status="FAIL" start="2026-02-09T15:23:41.413557" elapsed="20.222365">Element 'xpath=//*[@id="root"]/div/main/section/div[3]/div[2]/div/div/a[1]/div' not visible after 20 seconds.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-09T15:24:01.636775" elapsed="2.185508"/>
+</kw>
+<status status="FAIL" start="2026-02-09T15:23:21.514682" elapsed="42.307702"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testRF02" id="s1" pass="1" fail="1" skip="0">testRF02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
